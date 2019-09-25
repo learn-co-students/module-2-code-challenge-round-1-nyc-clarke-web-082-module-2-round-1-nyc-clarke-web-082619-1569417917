@@ -1,5 +1,7 @@
-<h2>All Heroines</h2>
+<h1>All Heroines</h1>
 
+
+<h4><%= link_to "Create a New Heroine!", new_heroine_path %></h4>
 
 <%= form_with(url: "/heroines", method: "get") do %>
   <%= label_tag(:power_filter, "Filter By Power: ") %>
@@ -19,3 +21,5 @@
     <br>
   <% end %>
 </ul>
+
+<%= link_to "Create a New Heroine!", new_heroine_path %>

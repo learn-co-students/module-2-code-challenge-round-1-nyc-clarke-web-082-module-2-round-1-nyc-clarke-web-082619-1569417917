@@ -7,7 +7,6 @@ class HeroinesController < ApplicationController
     if @power_filter
       @power_filter.strip!
       if @power_filter.length > 0
-
         @heroines = Heroine.filtered_by_power(@power_filter)
       end
     end

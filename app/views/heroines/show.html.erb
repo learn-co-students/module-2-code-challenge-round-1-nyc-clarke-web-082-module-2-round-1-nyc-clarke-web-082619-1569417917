@@ -2,3 +2,5 @@
 
 <p>Name: <%=@heroine.name%></p>
 <p>Power: <%= link_to @heroine.power.name.titlecase, power_path(@heroine.power) %></p>
+
+<h4><%= link_to "Back to Heroine Index", heroines_path %></h4>
