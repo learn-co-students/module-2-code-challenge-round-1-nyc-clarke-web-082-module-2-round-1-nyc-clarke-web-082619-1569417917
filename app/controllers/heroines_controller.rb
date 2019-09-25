@@ -1,10 +1,10 @@
 class HeroinesController < ApplicationController
   def index
     @heroines = Heroine.all
-    # if params.key?(:q)
-    #   @H = @heroines.select{|heroine| heroine.power.name == params[:q]}
-    #   @heroines = @H
-    # end
+    if params.key?(:q)
+      @H = @heroines.select{|heroine| heroine.power.name == params[:q]}
+      @heroines = @H
+    end
   end
 
   def new
