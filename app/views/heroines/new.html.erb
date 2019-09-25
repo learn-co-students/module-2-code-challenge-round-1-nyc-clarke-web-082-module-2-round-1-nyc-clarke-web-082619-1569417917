@@ -15,7 +15,7 @@
     <%= f.text_field :super_name %><br>
 
     <%= f.label :power %>
-    <%= f.collection_select :power_id, Power.all, :id, :name %>
+    <%= f.collection_select :power_id, Power.all, :id, :name, {prompt: "Please select a power" } %>
 
     <%= f.submit %>
 

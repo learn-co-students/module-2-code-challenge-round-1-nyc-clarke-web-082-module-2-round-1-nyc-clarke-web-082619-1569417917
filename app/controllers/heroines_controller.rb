@@ -1,5 +1,5 @@
 class HeroinesController < ApplicationController
-    
+
   def index
     @heroines = Heroine.all
   end
@@ -13,7 +13,6 @@ class HeroinesController < ApplicationController
   end
 
   def create
-    # @heroine = Heroine.create(heroine_params)
     @heroine = Heroine.new(heroine_params)
       if @heroine.save
         redirect_to @heroine
