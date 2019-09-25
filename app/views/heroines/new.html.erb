@@ -1,0 +1,19 @@
+<h1> A New Heroine Approaches </h1>
+
+<%= form_for @heroine do |f| %>
+    Real Name
+    <%= f.text_field :name %><br>
+
+    Super Heroine Name
+    <%= f.text_field :super_name %><br>
+
+    <li>Super Power</li>
+    <%= f.collection_select :power_id, @powers, :id, :name %><br>
+    <br>
+    <%= f.submit %>
+    <%= link_to  "Create this Heroine", @heroine %>
+
+<% end %>
+
+
+<!-- idk how you guys wanted it to look but htmtl.erb displays just words soo lol-->
