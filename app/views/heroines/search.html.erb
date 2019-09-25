@@ -1,4 +1,4 @@
-<h2>All Heroines</h2>
+<h2>All Heroines with <%=@selected_power.name%></h2>
 
 <ul>
   <% @heroines.each do |heroine| %>
@@ -15,4 +15,5 @@
   <%= collection_select(:power, :q, Power.all, :id, :name)%>
   <%= submit_tag("Search") %>
 <% end %>
-<%= button_to "New Heroine", new_heroine_path, method: :get%>
+
+<%= button_to "Back to all Heroines", heroines_path, method: :get %>

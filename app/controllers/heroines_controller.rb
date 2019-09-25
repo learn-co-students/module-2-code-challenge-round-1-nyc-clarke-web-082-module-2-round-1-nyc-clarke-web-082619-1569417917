@@ -19,4 +19,13 @@ class HeroinesController < ApplicationController
         render :new
       end
     end
+
+    def search
+      @heroines = Heroine.all.select do |heroine|
+        heroine.power.id == params["power"]["q"].to_i
+      end
+
+      @selected_power = Power.find(params["power"]["q"].to_i)
+      render :search
+    end
 end

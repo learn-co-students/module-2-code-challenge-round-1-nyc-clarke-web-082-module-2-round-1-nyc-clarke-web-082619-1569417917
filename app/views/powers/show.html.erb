@@ -1,2 +1,4 @@
 <h1><%=@power.name%></h1>
 <p>Description: <%= @power.description %></p>
+<%= button_to "Heroines", heroines_path, method: :get%>
+<%= button_to "Superpowers", powers_path, method: :get %>
