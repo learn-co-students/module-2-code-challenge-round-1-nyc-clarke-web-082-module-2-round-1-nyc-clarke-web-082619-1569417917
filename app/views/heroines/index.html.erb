@@ -1,5 +1,15 @@
 <h2>All Heroines</h2>
 
+
+<%= form_with(url: "/heroines", method: "get") do %>
+  <%= label_tag(:power_filter, "Filter By Power:") %>
+  <%= text_field_tag(:power_filter) %>
+  <%= submit_tag("Apply") %>
+<% end %>
+
+<p>Filter: <%= @power_filter %></p>
+
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
