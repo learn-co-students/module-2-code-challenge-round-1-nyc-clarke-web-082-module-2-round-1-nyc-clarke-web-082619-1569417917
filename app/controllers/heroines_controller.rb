@@ -1,4 +1,6 @@
 class HeroinesController < ApplicationController
+  
+ 
   def index
     @heroines = Heroine.all
   end
@@ -17,6 +19,11 @@ class HeroinesController < ApplicationController
 
     redirect_to @heroine
   end
+
+   #def search
+   # @heroines = Heroine.all
+   # @heroines = @heroines.search(params[:search]) if params[:search].present?
+   #end
 
   private
 
