@@ -1,5 +1,25 @@
 <h2>All Heroines</h2>
 
+
+  <%= form_tag(heroines_path, method: "get") do %>
+    <%= label_tag(:search, "Type power name") %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+<% if @heroines_with_power != nil%>  
+
+      <% @heroines_with_power.each do |heroine| %>
+      <h4> <%= heroine.super_name %> has the <%= params[:search]%> power</h4>
+      <%end %>
+
+<% end %>
+
+
+
+
+
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
