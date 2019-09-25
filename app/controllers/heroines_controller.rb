@@ -5,6 +5,7 @@ class HeroinesController < ApplicationController
     @power_filter = params[:power_filter]
 
     if @power_filter
+      @power_filter.strip!
       if @power_filter.length > 0
 
         @heroines = Heroine.filtered_by_power(@power_filter)
