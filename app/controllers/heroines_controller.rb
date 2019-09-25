@@ -16,6 +16,7 @@ class HeroinesController < ApplicationController
       if @heroine.save
         redirect_to @heroine
       else
+        flash[:errors] = @heroine.errors.full_messages
         render :new
       end
     end

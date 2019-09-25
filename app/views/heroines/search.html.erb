@@ -1,5 +1,9 @@
 <h2>All Heroines with <%=@selected_power.name%></h2>
-
+<%= form_with(url: "/search", method: "get") do %>
+  <%= label_tag(:q, "Heroines with this power:") %>
+  <%= collection_select(:power, :q, Power.all, :id, :name)%>
+  <%= submit_tag("Search") %>
+<% end %>
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
@@ -10,10 +14,6 @@
 </ul>
 
 
-<%= form_with(url: "/search", method: "get") do %>
-  <%= label_tag(:q, "Heroines with this power:") %>
-  <%= collection_select(:power, :q, Power.all, :id, :name)%>
-  <%= submit_tag("Search") %>
-<% end %>
+
 
 <%= button_to "Back to all Heroines", heroines_path, method: :get %>

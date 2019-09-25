@@ -1,3 +1,8 @@
+<% if flash[:errors] %> 
+<% flash[:errors].each do |e| %>
+<%= e %>
+<% end %>
+<% end %>
 <h1>Create Heroine</h1>
 <%= form_for @heroine do |f| %>
 <%= f.label :name%>
