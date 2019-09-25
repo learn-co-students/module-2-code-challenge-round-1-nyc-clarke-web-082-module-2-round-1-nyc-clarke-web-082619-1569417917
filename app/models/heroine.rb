@@ -1,6 +1,6 @@
 class Heroine < ApplicationRecord
     belongs_to :power
-    validates :super_name, uniqueness: true
+    validates :super_name, uniqueness: { case_sensitive: false }
 
     def self.search(power_name)
       if power_name  
