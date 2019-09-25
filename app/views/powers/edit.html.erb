@@ -1,0 +1,7 @@
+<div> <%= flash.now[:error] %> </div>
+
+<%= form_for @power do |f| %>
+    Name: <%= f.text_field :name %><br>
+    Description: <%= f.text_area :description %> <br>
+    <%= f.submit "Update Power" %>
+<% end %>

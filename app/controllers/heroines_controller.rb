@@ -20,8 +20,22 @@ class HeroinesController < ApplicationController
     if @heroine.save
       redirect_to @heroine
     else
-      flash[:error] = "Error: Heroines must have unique Super Names!"
+      flash.now[:error] = "Error: Heroines must have a non-empty unique Super Name!"
       render :new
+    end
+  end
+
+  def edit
+    @heroine = Heroine.find(params[:id])
+  end
+
+  def update
+    @heroine = Heroine.find(params[:id])
+    if @heroine.update(heroine_params)
+      redirect_to @heroine
+    else
+      flash.now[:error] = "Error: Heroines must have a non-empty unique Super Name!"
+      render :edit
     end
   end
 
