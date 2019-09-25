@@ -1,0 +1,8 @@
+<h1>Heroine Page</h1>
+<h2>Name: <%= @heroine.name %></h2><br>
+<h2>Super Name: <%= @heroine.super_name %></h2><br>
+<% Power.all.each do |power| %><br>
+<% if power.id == @heroine.power_id %>
+<h2>Power: <%= link_to power.name, power_path(power) %></h2><br>
+<% end %>
+<% end %>
