@@ -1,0 +1,9 @@
+<div> <%= flash[:error] %> </div>
+
+
+<%= form_for @heroine do |f| %>
+    Name: <%= f.text_field :name %><br>
+    Super Name: <%= f.text_field :super_name %><br>
+    Power: <%= f.collection_select :power_id, Power.all, :id, :name %><br>
+    <%= f.submit "Create Heroine" %>
+<% end %>
