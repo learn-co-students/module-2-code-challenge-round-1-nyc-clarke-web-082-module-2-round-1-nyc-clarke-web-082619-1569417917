@@ -1,0 +1,19 @@
+# <% if flash[:errors] %>
+#     <% flash[:errors].each do |error| %>
+#         <%= error %>
+#         <% end %>
+#   <%  else %>
+#         <% end %>
+
+
+<h1>Heroine Form</h1>
+
+<%= form_for @heroine do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :super_name %>
+    <%= f.text_field :super_name %>
+    <%= f.label :power %>
+    <%= f.collection_select :power_id, Power.all, :id, :name %>
+    <%= f.submit %>
+    <% end %>
