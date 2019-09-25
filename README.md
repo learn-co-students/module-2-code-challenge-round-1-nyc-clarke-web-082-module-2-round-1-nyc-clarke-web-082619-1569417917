@@ -28,21 +28,21 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
-1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
+1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations. DONE
 
-2. On the heroines index page, a heroine's super name should link to that heroine's show page.
+2. On the heroines index page, a heroine's super name should link to that heroine's show page. DONE
 
-3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
+3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.   DONE
 
-4. The power show page should have its name and description.
+4. The power show page should have its name and description. DONE
 
-5. As a visitor to the website, I should be able to create a new heroine with her name and super name.
+5. As a visitor to the website, I should be able to create a new heroine with her name and super name. DONE
 
-6. The form should also allow each heroine to be created with **only one of the existing powers**.
+6. The form should also allow each heroine to be created with **only one of the existing powers**. DONE
 
   ![A form for adding a new heroine](new_heroine_form.gif)
 
-7. Make sure no two heroines have the same super name.
+7. Make sure no two heroines have the same super name. DONE
 
 # BONUS TO BE COMPLETED IF EVERYTHING ELSE IS DONE
 

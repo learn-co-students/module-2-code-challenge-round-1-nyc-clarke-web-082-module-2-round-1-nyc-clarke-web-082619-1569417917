@@ -3,8 +3,12 @@
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<form action= <%=new_heroine_path%> >
+  <button type="submit">Create Heroine</button>
+</form>
