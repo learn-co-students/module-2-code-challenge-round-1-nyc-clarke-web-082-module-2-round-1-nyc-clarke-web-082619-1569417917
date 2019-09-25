@@ -1,0 +1,5 @@
+<h1><%= @power.name %></h1>
+<h2><%= @power.description %></h2>
+
+<%= button_to "Edit", edit_power_path, method: :get %>
+<%= button_to "Delete", {action: 'destroy'},method: :delete  %>

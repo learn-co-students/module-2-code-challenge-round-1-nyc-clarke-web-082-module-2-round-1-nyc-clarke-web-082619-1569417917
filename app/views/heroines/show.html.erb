@@ -1,0 +1,9 @@
+<h1><%= @heroine.name %></h1>
+<h2><%= @heroine.super_name %></h2>
+<% if @heroine.power %>
+<h3><%= link_to @heroine.power.name, power_path(@heroine.power) %></h3>
+<% else %>
+<h3>N/A</h3>
+<% end %>
+<%= button_to "Edit", edit_heroine_path, method: :get %>
+<%= button_to "Delete", { action: "destroy" }, method: :delete %>
