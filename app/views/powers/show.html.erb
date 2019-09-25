@@ -3,8 +3,8 @@
 <h3>Description:</h3> 
 <p><%=@power.description%></p>
 
-
-<ul> Heroines with this Power:
+<h3>Heroines with this Power: </h3>
+<ul> 
     <% Heroine.filtered_by_power(@power.name).each do |heroine| %>
       <li>
         <%= link_to heroine.super_name, heroine_path(heroine) %>

@@ -2,10 +2,11 @@
 
 
 <%= form_with(url: "/heroines", method: "get") do %>
-  <%= label_tag(:power_filter, "Filter By Power:") %>
+  <%= label_tag(:power_filter, "Filter By Power: ") %>
   <%= text_field_tag(:power_filter) %>
   <%= submit_tag("Apply") %>
-<% end %>
+<% end %><br>
+<p>(Apply blank space to clear filter)</p>
 
 <p>Filter: <%= @power_filter %></p>
 

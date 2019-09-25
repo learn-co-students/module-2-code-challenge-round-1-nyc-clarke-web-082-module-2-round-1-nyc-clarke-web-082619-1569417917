@@ -4,8 +4,11 @@ class HeroinesController < ApplicationController
     @heroines = Heroine.all
     @power_filter = params[:power_filter]
 
-    if @power_filter.length > 0
-      @heroines = Heroine.filtered_by_power(@power_filter)
+    if @power_filter
+      if @power_filter.length > 0
+
+        @heroines = Heroine.filtered_by_power(@power_filter)
+      end
     end
   end
 
